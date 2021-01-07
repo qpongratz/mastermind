@@ -11,7 +11,13 @@ class Player
   end
 
   def create_code
-    'playercode'
+    Display.code_prompt
+    input = gets.chomp
+    if valid?(input)
+      input
+    else
+      Display.invalid(input, 'code')
+    end
   end
 
   def guess

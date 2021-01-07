@@ -6,6 +6,10 @@ module Display
     puts 'What do you want your guess to be?'
   end
 
+  def self.code_prompt
+    puts 'What secret code do you want the computer to guess?'
+  end
+
   def self.invalid(input, type)
     puts "#{input} is an invalid #{type}."
   end
