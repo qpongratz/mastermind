@@ -15,12 +15,12 @@ class Player
   end
 
   def guess
-    puts Display.guess_prompt
+    Display.guess_prompt
     input = gets.chomp
     if valid?(input)
       input
     else
-      puts Display.invalid(input, 'guess')
+      Display.invalid(input, 'guess')
       guess
     end
   end
@@ -35,5 +35,19 @@ class Player
     else
       false
     end
+  end
+end
+
+# Define special methods if player is the code maker
+class PlayerMaker < Player
+  def win
+    Display.player_maker_win
+  end
+end
+
+# Define special methods if player is the code breaker
+class PlayerBreaker < Player
+  def win
+    Display.player_breaker_win
   end
 end

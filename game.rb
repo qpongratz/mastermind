@@ -9,11 +9,11 @@ require 'pry'
 class Game
   def initialize(mode)
     if mode == 'breaker'
-      @breaker = Player.new
+      @breaker = PlayerBreaker.new
       @maker = Computer.new
     else
       @breaker = Computer.new
-      @maker = Player.new
+      @maker = PlayerMaker.new
     end
     @checker = CodeChecker.new
     @checker.code = @maker.create_code.to_a

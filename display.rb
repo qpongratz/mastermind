@@ -3,10 +3,19 @@
 # Module for displaying text
 module Display
   def self.guess_prompt
-    'What do you want your guess to be?'
+    puts 'What do you want your guess to be?'
   end
-  
+
   def self.invalid(input, type)
-    "#{input} is an invalid #{type}."
+    puts "#{input} is an invalid #{type}."
   end
+
+  def self.player_breaker_win
+    puts "You've won!"
+    puts "You were able to crack the computer's secret code"
+  end
+
+  def self.player_maker_win
+    puts "You've won!"
+    puts 'The computer was not able to break your secret code.'
 end
