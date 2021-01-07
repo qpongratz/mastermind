@@ -20,14 +20,15 @@ class Game
     @turn_count = 0
   end
 
-  def play_game
+  def play_turn
+    @turn_count += 1
     @guess = @breaker.guess
     @checker.check(@guess.to_a)
-    # @checker.check_guess(guess)
-    # if not win, display feedback
-    # increment turn count
-    # if not loss, repeat
-  end
+    return @breaker.win if @checker.broken
+    return @maker.win if @turn_count > 12
 
+    Display.feedback(@checker.feedback)
+    play_turn
+  end
 
 end

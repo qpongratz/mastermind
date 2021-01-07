@@ -3,21 +3,20 @@
 # Checks code given against saved code and gives feedback
 class CodeChecker
   attr_accessor :code 
-  attr_reader :win, :feedback
+  attr_reader :broken, :feedback
 
   def initialize
-    @win = false
+    @broken = false
     @feedback = [0, 0]
   end
 
   def check(guess)
     if guess == code
-      @win = true
+      @broken = true
     else
       @feedback = [0, 0]
       correct_spot(guess)
       correct_elements(guess)
-      p @feedback
     end
   end
 
