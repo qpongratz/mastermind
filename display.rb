@@ -20,6 +20,16 @@ module Display
     puts 'The computer was not able to break your secret code.'
   end
 
+  def self.computer_breaker_win
+    puts "You've lost..."
+    puts 'The computer broke your secret code.'
+  end
+
+  def self.computer_maker_win
+    puts "You've lost..."
+    puts "You were not able to break the computer's secret code"
+  end
+
   def self.feedback(feedback)
     spot = feedback[0]
     included = feedback[1] - feedback[0]
