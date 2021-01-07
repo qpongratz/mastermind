@@ -28,4 +28,10 @@ module Display
     included.times { displayed += '(~) ' }
     puts displayed
   end
+
+  def self.turns_left(turns)
+    if turns == 1
+      puts 'One guess remaining.'
+    else
+      puts "#{turns} guesses remaining."
 end
