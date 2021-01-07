@@ -11,9 +11,9 @@ class Computer
   end
 
   def create_code
-    code = ''
-    4.times { code += rand(1..6).to_s }
-    code
+    @code = ''
+    4.times { @code += rand(1..6).to_s }
+    @code
   end
 
   def guess
@@ -26,6 +26,6 @@ class Computer
   end
   
   def maker_win
-    Display.computer_maker_win
+    Display.computer_maker_win(@code)
   end
 end

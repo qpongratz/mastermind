@@ -30,9 +30,9 @@ module Display
     puts 'The computer broke your secret code.'
   end
 
-  def self.computer_maker_win
+  def self.computer_maker_win(code)
     puts "You've lost..."
-    puts "You were not able to break the computer's secret code"
+    puts "You were not able to break the computer's secret code of #{code}"
   end
 
   def self.feedback(feedback)
