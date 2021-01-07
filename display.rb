@@ -12,6 +12,7 @@ module Display
 
   def self.invalid(input, type)
     puts "#{input} is an invalid #{type}."
+    puts "Your #{type} should be 4 digits long and each digit should be between 1 and 6 inclusive."
   end
 
   def self.player_breaker_win
