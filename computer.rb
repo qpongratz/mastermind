@@ -7,12 +7,13 @@ class Computer
   end
 
   def create_code
-    '1234'
+    code = ''
+    4.times { code += rand(1..6).to_s }
+    code
   end
 
   def guess
     # make an algorithm which dictates how computer does its guesses
     '1234'
   end
-  
 end

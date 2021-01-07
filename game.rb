@@ -12,11 +12,11 @@ class Game
 
   def initialize(mode)
     if mode == 'breaker'
-      @breaker = PlayerBreaker.new
+      @breaker = Player.new
       @maker = Computer.new
     else
       @breaker = Computer.new
-      @maker = PlayerMaker.new
+      @maker = Player.new
     end
     @checker = CodeChecker.new
     @checker.code = @maker.create_code.split('')
