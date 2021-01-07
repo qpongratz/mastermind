@@ -19,16 +19,16 @@ class Game
       @maker = PlayerMaker.new
     end
     @checker = CodeChecker.new
-    @checker.code = @maker.create_code.to_a
+    @checker.code = @maker.create_code.split('')
     @turn_count = 0
   end
 
   def play_turn
     @turn_count += 1
     @guess = @breaker.guess
-    @checker.check(@guess.to_a)
-    return @breaker.win if @checker.broken
-    return @maker.win if @turn_count > 12
+    @checker.check(@guess.split(''))
+    return @breaker.breaker_win if @checker.broken
+    return @maker.maker_win if @turn_count > 12
 
     Display.feedback(@checker.feedback)
     Display.turns_left(12 - @turn_count)

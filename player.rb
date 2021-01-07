@@ -25,6 +25,14 @@ class Player
     end
   end
 
+  def breaker_win
+    Display.player_breaker_win
+  end
+
+  def maker_win
+    Display.player_maker_win
+  end
+
   def valid?(input)
     if input.length == 4 &&
        input[0].between?('1', '6') &&
@@ -35,19 +43,5 @@ class Player
     else
       false
     end
-  end
-end
-
-# Define special methods if player is the code maker
-class PlayerMaker < Player
-  def win
-    Display.player_maker_win
-  end
-end
-
-# Define special methods if player is the code breaker
-class PlayerBreaker < Player
-  def win
-    Display.player_breaker_win
   end
 end

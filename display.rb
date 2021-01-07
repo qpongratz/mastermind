@@ -34,4 +34,6 @@ module Display
       puts 'One guess remaining.'
     else
       puts "#{turns} guesses remaining."
+    end
+  end
 end
