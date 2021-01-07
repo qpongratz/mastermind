@@ -3,4 +3,7 @@
 require_relative 'game'
 
 # Initializes game and can contrl if another is played
-Game.new('breaker')
+compcode = Game.new('breaker')
+compcode.play_game
+playcode = Game.new('maker')
+playcode.play_game

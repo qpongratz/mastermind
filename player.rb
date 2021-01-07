@@ -5,4 +5,8 @@ class Player
   def initialize
     puts 'Player has been made'
   end
+
+  def create_code
+    'playercode'
+  end
 end
