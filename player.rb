@@ -20,13 +20,20 @@ class Player
     if valid?(input)
       input
     else
+      puts Display.invalid(input, 'guess')
       guess
     end
   end
 
   def valid?(input)
-    if input
+    if input.length == 4 &&
+       input[0].between?('1', '6') &&
+       input[1].between?('1', '6') &&
+       input[2].between?('1', '6') &&
+       input[3].between?('1', '6')
       true
+    else
+      false
     end
   end
 end
