@@ -5,6 +5,7 @@ require_relative 'display'
 # Gets player input
 class Player
   include Display
+  attr_writer :feedback
 
   def initialize
     puts 'Player has been made'
@@ -29,6 +30,10 @@ class Player
       Display.invalid(input, 'guess')
       guess
     end
+  end
+
+  def feedback(feedback)
+    Display.feedback(feedback)
   end
 
   def breaker_win

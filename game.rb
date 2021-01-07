@@ -29,8 +29,8 @@ class Game
     @checker.check(@guess.split(''))
     return @breaker.breaker_win if @checker.broken
     return @maker.maker_win if @turn_count > 12
-
-    Display.feedback(@checker.feedback)
+    
+    @breaker.feedback(@checker.feedback)
     Display.turns_left(12 - @turn_count)
     play_turn
   end
