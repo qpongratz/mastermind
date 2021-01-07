@@ -7,7 +7,7 @@ class Computer
   end
 
   def create_code
-    'computercode'
+    '1234'
   end
 
   def guess

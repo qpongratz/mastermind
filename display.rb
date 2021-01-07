@@ -18,4 +18,14 @@ module Display
   def self.player_maker_win
     puts "You've won!"
     puts 'The computer was not able to break your secret code.'
+  end
+
+  def self.feedback(feedback)
+    spot = feedback[0]
+    included = feedback[1] - feedback[0]
+    displayed = ''
+    spot.times { displayed += '(@) ' }
+    included.times { displayed += '(~) ' }
+    puts displayed
+  end
 end
