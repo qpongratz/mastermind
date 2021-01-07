@@ -9,5 +9,10 @@ class Computer
   def create_code
     'computercode'
   end
+
+  def guess
+    # make an algorithm which dictates how computer does its guesses
+    '1234'
+  end
   
 end

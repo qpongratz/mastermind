@@ -16,13 +16,13 @@ class Game
       @maker = Player.new
     end
     @checker = CodeChecker.new
-    @checker.code = @maker.create_code
+    @checker.code = @maker.create_code.to_a
     @turn_count = 0
   end
 
   def play_game
     @guess = @breaker.guess
-    puts @guess
+    @checker.check(@guess.to_a)
     # @checker.check_guess(guess)
     # if not win, display feedback
     # increment turn count
