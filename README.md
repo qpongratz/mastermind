@@ -17,5 +17,6 @@ For further in depth rules or context visit:
 
 ### Learned:
   Definitely a lot more comfortable with OOP now.
-  More comfortable using pry to debug.
   
+  More comfortable using pry to debug.
+
