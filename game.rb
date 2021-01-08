@@ -4,7 +4,6 @@ require_relative 'player'
 require_relative 'computer'
 require_relative 'code_checker'
 require_relative 'display'
-require 'pry'
 
 # Handles the flow of the game depending on which version you pick.
 class Game

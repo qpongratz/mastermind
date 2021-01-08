@@ -2,7 +2,6 @@
 
 require_relative 'display'
 require_relative 'code_checker'
-require 'pry'
 
 # Picks a code randomly or via algorithm
 class Computer
