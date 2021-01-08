@@ -26,10 +26,10 @@ class Game
   def play_turn
     @turn_count += 1
     @guess = @breaker.guess
-    @checker.check(@guess.split(''))
+    @checker.check(@guess)
     return @breaker.breaker_win if @checker.broken
     return @maker.maker_win if @turn_count > 12
-    
+
     @breaker.feedback(@checker.feedback)
     Display.turns_left(12 - @turn_count)
     play_turn

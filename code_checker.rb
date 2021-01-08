@@ -2,7 +2,7 @@
 
 # Checks code given against saved code and gives feedback
 class CodeChecker
-  attr_accessor :code 
+  attr_accessor :code
   attr_reader :broken, :feedback
 
   def initialize
@@ -11,12 +11,13 @@ class CodeChecker
   end
 
   def check(guess)
-    if guess == code
+    guess_array = guess.split('')
+    if guess_array == code
       @broken = true
     else
       @feedback = [0, 0]
-      correct_spot(guess)
-      correct_elements(guess)
+      correct_spot(guess_array)
+      correct_elements(guess_array)
     end
   end
 
