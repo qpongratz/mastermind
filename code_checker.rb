@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
-
 # Checks code given against saved code and gives feedback
 class CodeChecker
   attr_accessor :code
@@ -35,18 +33,17 @@ class CodeChecker
     digits = tally(guess)
     digits.each do |digit, frequency|
       in_code = code.count(digit)
-      @feedback[1] += (frequency < in_code ? frequency : in_code) 
+      @feedback[1] += (frequency < in_code ? frequency : in_code)
     end
   end
 
   def tally(array)
-    array.reduce({}) do |hash, element|
+    array.each_with_object({}) do |element, hash|
       if hash[element]
         hash[element] += 1
-      else 
+      else
         hash[element] = 1
       end
-      hash
     end
   end
 end

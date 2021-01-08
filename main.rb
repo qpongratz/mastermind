@@ -20,7 +20,7 @@ class Main
     return examples if answer == '3'
     return end_game if answer == '4'
 
-    Display.invalid(answer, 'command')
+    puts "#{answer} is not a valid selection."
     make_selection
   end
 
