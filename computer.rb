@@ -12,6 +12,7 @@ class Computer
   def initialize
     create_code_space
     @mini_checker = CodeChecker.new
+    @code = @code_space.sample
   end
 
   def guess

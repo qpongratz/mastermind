@@ -19,7 +19,7 @@ class Game
       @maker = Player.new
     end
     @checker = CodeChecker.new
-    @checker.code = @maker.create_code.split('')
+    @checker.code = @maker.code.split('')
     @turn_count = 0
   end
 

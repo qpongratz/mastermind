@@ -7,11 +7,7 @@ class Player
   include Display
   attr_writer :feedback
 
-  def initialize
-    puts 'Player has been made'
-  end
-
-  def create_code
+  def code
     Display.code_prompt
     input = gets.chomp
     if valid?(input)
